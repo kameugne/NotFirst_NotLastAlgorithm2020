@@ -91,16 +91,38 @@ public class Main {
         String fileName;
         RunRCPSP sample;
         String dir = "Data/BL/";
-        for (int i = 1; i <= 20; i++) {
-            fileName = dir + "bl20_" + i + ".rcp";
-            String name = "bl20_" + i;
-            System.out.print(name + ".rcp" + " | ");
-            for (int prop = 0; prop < 7; prop++) {
-                sample = new RunRCPSP(fileName, prop, 0);
-                System.out.print(+sample.howMuchTime() + " | " + sample.howManyBacktracks() + " | " + sample.makeSpanSolution() + " | " + sample.howManyAdjustments() + " | ");
+        BufferedWriter writer = new BufferedWriter(new FileWriter("Data/NewResults/BL25Results.txt"));
+        for (int search = 0; search < 3; search++) {
+            if (search == 0) {
+                System.out.println("Static Search Results");
+                writer.write("Static Search Results");
+                writer.newLine();
+            }else if (search == 1) {
+                System.out.println("COS + First-Fail Results");
+                writer.write("COS + First-Fail Results");
+                writer.newLine();
+            }else {
+                System.out.println("COS + domOverWegSearch Results");
+                writer.write("COS + domOverWegSearch Results");
+                writer.newLine();
             }
-            System.out.println("");
+            for (int i = 1; i <= 20; i++) {
+                fileName = dir + "bl25_" + i + ".rcp";
+                String name = "bl25_" + i;
+                System.out.print(name + ".rcp" + " | ");
+                writer.write(name + ".rcp" + " | ");
+
+                for (int prop = 0; prop < 10; prop++) {
+                    sample = new RunRCPSP(fileName, prop, search, 10);
+                    System.out.print(+sample.howMuchTime() + " | " + sample.howManyBacktracks() + " | " + sample.makeSpanSolution() + " | " + sample.howManyAdjustments() + " | ");
+                    writer.write(+sample.howMuchTime() + " | " + sample.howManyBacktracks() + " | " + sample.makeSpanSolution() + " | " + sample.howManyAdjustments() + " | ");
+                }
+                System.out.println("");
+                writer.newLine();
+            }
+
         }
+        writer.close();
 
     }
 }

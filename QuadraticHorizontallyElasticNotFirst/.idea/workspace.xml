@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9bc666d1-94bb-4770-b29d-c64999cefc1a" name="Default Changelist" comment="" />
+    <list default="true" id="9bc666d1-94bb-4770-b29d-c64999cefc1a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/HorizontallyEdgeFinder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/HorizontallyEdgeFinderConstraint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/HorizontallyEdgeFinderRevisited.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/HorizontallyEdgeFinderRevisitedConstraint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/QuadraticHorizontallyElasticNotFirst/EvaluationPetitExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuadraticHorizontallyElasticNotFirst/EvaluationPetitExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/QuadraticHorizontallyElasticNotFirst/HorizontallyCubicNotFirst.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuadraticHorizontallyElasticNotFirst/HorizontallyCubicNotFirst.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/QuadraticHorizontallyElasticNotFirst/HorizontallyNotFirst.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuadraticHorizontallyElasticNotFirst/HorizontallyNotFirst.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/QuadraticHorizontallyElasticNotFirst/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuadraticHorizontallyElasticNotFirst/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/QuadraticHorizontallyElasticNotFirst/RunRCPSP.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuadraticHorizontallyElasticNotFirst/RunRCPSP.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EvaluationPetitExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EvaluationPetitExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HorizontallyCubicNotFirst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HorizontallyCubicNotFirst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HorizontallyNotFirst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HorizontallyNotFirst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RunRCPSP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RunRCPSP.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,47 +32,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1872">
-              <caret line="105" column="1" lean-forward="true" selection-start-line="105" selection-start-column="1" selection-end-line="105" selection-end-column="1" />
+            <state relative-caret-position="1782">
+              <caret line="100" column="63" selection-start-line="100" selection-start-column="63" selection-end-line="100" selection-end-column="63" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AdjustmentsPropagator.java">
+        <entry file="file://$PROJECT_DIR$/src/EvaluationPetitExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CombQuadHorizNotFirstConstraint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="9" column="3" lean-forward="true" selection-start-line="3" selection-end-line="9" selection-end-column="3" />
-              <folding>
-                <element signature="e#8132#8133#0" expanded="true" />
-                <element signature="e#8166#8167#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DestructiveLowerBound.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1569">
-              <caret line="237" column="26" selection-start-line="237" selection-start-column="26" selection-end-line="237" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#13783#13784#0" expanded="true" />
-                <element signature="e#13816#13817#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="180">
+              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -62,35 +53,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HorizontallyCubicNotFirst.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="9" column="3" lean-forward="true" selection-start-line="4" selection-end-line="9" selection-end-column="3" />
+            <state relative-caret-position="2754">
+              <caret line="155" column="17" selection-start-line="155" selection-start-column="17" selection-end-line="155" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/RunRCPSP.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="558">
+              <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HorizontallyCubicNotFirstConstraint.java">
+        <entry file="file://$PROJECT_DIR$/Data/NewResults/BL25Results.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="9" column="3" lean-forward="true" selection-start-line="3" selection-end-line="9" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HorizontallyNotFirst.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="3" lean-forward="true" selection-start-line="1" selection-end-line="7" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HorizontallyNotFirstConstraint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+            <state relative-caret-position="586">
+              <caret line="63" selection-start-line="63" selection-end-line="63" />
             </state>
           </provider>
         </entry>
@@ -104,42 +86,73 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>System</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/EfficientExtendedThetaTree.java" />
-        <option value="$PROJECT_DIR$/src/EvaluationPetitExample.java" />
-        <option value="$PROJECT_DIR$/src/RunRCPSP.java" />
         <option value="$PROJECT_DIR$/src/LowerBoundOfInstance.java" />
         <option value="$PROJECT_DIR$/src/ProofOptimality.java" />
         <option value="$PROJECT_DIR$/src/DestructiveLowerBound.java" />
         <option value="$PROJECT_DIR$/src/CombQuadHorizNotFirstConstraint.java" />
-        <option value="$PROJECT_DIR$/src/HorizontallyCubicNotFirst.java" />
         <option value="$PROJECT_DIR$/src/HorizontallyCubicNotFirstConstraint.java" />
-        <option value="$PROJECT_DIR$/src/HorizontallyNotFirst.java" />
         <option value="$PROJECT_DIR$/src/HorizontallyNotFirstConstraint.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Test.java" />
+        <option value="$PROJECT_DIR$/src/HorizontallyNotFirst.java" />
+        <option value="$PROJECT_DIR$/src/HorizontallyEFRevisited.java" />
+        <option value="$PROJECT_DIR$/src/HorizontallyEdgeFinder.java" />
+        <option value="$PROJECT_DIR$/src/HorizontallyEdgeFinderRevisited.java" />
+        <option value="$PROJECT_DIR$/src/HorizontallyEdgeFinderRevisitedConstraint.java" />
+        <option value="$PROJECT_DIR$/src/HorizontallyEdgeFinderConstraint.java" />
+        <option value="$PROJECT_DIR$/src/EvaluationPetitExample.java" />
+        <option value="$PROJECT_DIR$/src/HorizontallyCubicNotFirst.java" />
+        <option value="$PROJECT_DIR$/src/RunRCPSP.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="5" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1430" />
-    <option name="height" value="785" />
+    <option name="width" value="1440" />
+    <option name="height" value="814" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="QuadraticHorizontallyElasticNotFirst" type="b2602c69:ProjectViewProjectNode" />
               <item name="QuadraticHorizontallyElasticNotFirst" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuadraticHorizontallyElasticNotFirst" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuadraticHorizontallyElasticNotFirst" type="462c0819:PsiDirectoryNode" />
+              <item name="Data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuadraticHorizontallyElasticNotFirst" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuadraticHorizontallyElasticNotFirst" type="462c0819:PsiDirectoryNode" />
+              <item name="Data" type="462c0819:PsiDirectoryNode" />
+              <item name="NewResults" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuadraticHorizontallyElasticNotFirst" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuadraticHorizontallyElasticNotFirst" type="462c0819:PsiDirectoryNode" />
+              <item name="Data" type="462c0819:PsiDirectoryNode" />
+              <item name="Results" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="QuadraticHorizontallyElasticNotFirst" type="b2602c69:ProjectViewProjectNode" />
@@ -151,10 +164,10 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -172,7 +185,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="EvaluationPetitExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="EvaluationPetitExample" />
+      <module name="QuadraticHorizontallyElasticNotFirst" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="QuadraticHorizontallyElasticNotFirst" />
@@ -183,6 +203,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.EvaluationPetitExample" />
       </list>
     </recent_temporary>
   </component>
@@ -210,9 +231,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="980" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="814" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15548456" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1595136" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -220,7 +242,7 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.41103604" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2825485" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -299,13 +321,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RunRCPSP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4176">
-          <caret line="242" column="36" selection-start-line="242" selection-start-column="8" selection-end-line="242" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DisjointSets.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -327,34 +342,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EvaluationPetitExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="34" column="79" selection-start-line="34" selection-start-column="79" selection-end-line="34" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdjustmentsPropagator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CombQuadHorizNotFirstConstraint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="3" lean-forward="true" selection-start-line="3" selection-end-line="9" selection-end-column="3" />
-          <folding>
-            <element signature="e#8132#8133#0" expanded="true" />
-            <element signature="e#8166#8167#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HorizontallyTimeLineNotFirstConstraint.java" />
+    <entry file="file://$PROJECT_DIR$/src/QuadHorizontallyNotFirst.java" />
     <entry file="file://$PROJECT_DIR$/src/DestructiveLowerBound.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1569">
+        <state relative-caret-position="4086">
           <caret line="237" column="26" selection-start-line="237" selection-start-column="26" selection-end-line="237" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -364,38 +356,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HorizontallyCubicNotFirst.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="9" column="3" lean-forward="true" selection-start-line="4" selection-end-line="9" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/HorizontallyCubicNotFirstConstraint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
-          <caret line="9" column="3" lean-forward="true" selection-start-line="3" selection-end-line="9" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HorizontallyNotFirst.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="3" lean-forward="true" selection-start-line="1" selection-end-line="7" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HorizontallyTimeLineNotFirstConstraint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1166">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/QuadHorizontallyNotFirst.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-461">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <caret line="9" column="3" selection-start-line="3" selection-end-line="9" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -406,17 +370,159 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test.java">
+    <entry file="file://$PROJECT_DIR$/src/CombQuadHorizNotFirstConstraint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1018">
-          <caret line="71" column="8" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="8" />
+        <state relative-caret-position="126">
+          <caret line="9" column="3" selection-start-line="3" selection-end-line="9" selection-end-column="3" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdjustmentsPropagator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/QuadHorizontallyEdgeFinder/QuadHorizEdgeFinder/src/QuadEdgeFinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="508" selection-start-line="3" selection-start-column="28" selection-end-line="508" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/QuadHorizontallyEdgeFinder/QuadHorizEdgeFinder/src/QuadEdgeFinderConstraint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="158" column="1" lean-forward="true" selection-start-line="4" selection-start-column="38" selection-end-line="158" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/IdeaProjects/TimeTableHorizontallyElasticEdgeFinder/src/RevisitedEdgeFinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="581">
+          <caret line="390" selection-start-line="5" selection-start-column="4" selection-end-line="390" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/IdeaProjects/TimeTableHorizontallyElasticEdgeFinder/src/RevisitedEdgeFinderConstraint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="581">
+          <caret line="159" selection-start-line="4" selection-start-column="43" selection-end-line="159" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HorizontallyEdgeFinderConstraint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HorizontallyEdgeFinderRevisitedConstraint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HorizontallyEdgeFinderRevisited.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1278">
+          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HorizontallyNotFirst.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="2" selection-start-line="1" selection-end-line="4" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HorizontallyEdgeFinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="5" column="3" selection-start-line="2" selection-end-line="5" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/src-2/NewNotFirstAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="119" column="1" lean-forward="true" selection-start-line="50" selection-end-line="119" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/NewResults/BL20Results.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1872">
-          <caret line="105" column="1" lean-forward="true" selection-start-line="105" selection-start-column="1" selection-end-line="105" selection-end-column="1" />
+        <state relative-caret-position="1782">
+          <caret line="100" column="63" selection-start-line="100" selection-start-column="63" selection-end-line="100" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EvaluationPetitExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HorizontallyCubicNotFirst.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2754">
+          <caret line="155" column="17" selection-start-line="155" selection-start-column="17" selection-end-line="155" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/NewResults/BL25Results.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="586">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RunRCPSP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
         </state>
       </provider>
     </entry>

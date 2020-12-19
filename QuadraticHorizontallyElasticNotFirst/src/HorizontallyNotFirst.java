@@ -183,6 +183,50 @@ public class HorizontallyNotFirst {
         return Integer.MIN_VALUE;
     }
 
+    private void InitializeIncrements(int ind, int maxIndex) {
+        Timepoint t = tl.first;
+        while(t != null)
+        {
+            t.increment = 0;
+            t.incrementMax = 0;
+            t.hMaxTotal = 0;
+            t.hreal = 0;
+            t.minimumOverflow = 0;
+            t.overflow = 0;
+            t.capacity = C;
+            t.energy = 0;
+            t.contact = null;
+
+            t = t.next;
+        }
+        for(int i = 0; i <= maxIndex; i++) {
+            if (i != ind && tasks[tasks_indices_lct[ind]].earliestStartingTime() < tasks[tasks_indices_lct[i]].earliestCompletionTime()) {
+                t = tasks[tasks_indices_lct[i]].est_to_timepoint;
+                t.increment += tasks[tasks_indices_lct[i]].height();
+                t.incrementMax += tasks[tasks_indices_lct[i]].height();
+
+                t = tasks[tasks_indices_lct[i]].ect_to_timepoint;
+                t.increment -= tasks[tasks_indices_lct[i]].height();
+
+                t = tasks[tasks_indices_lct[i]].lct_to_timepoint;
+                t.incrementMax -= tasks[tasks_indices_lct[i]].height();
+            }
+        }
+        t = tl.first;
+        t.increment += tasks[tasks_indices_lct[ind]].height();
+        t.incrementMax += tasks[tasks_indices_lct[ind]].height();
+        if (tasks[tasks_indices_lct[ind]].earliestCompletionTime() < tasks[tasks_indices_lct[maxIndex]].latestCompletionTime()) {
+            t = tasks[tasks_indices_lct[ind]].ect_to_timepoint;
+            t.increment -= tasks[tasks_indices_lct[ind]].height();
+            t.incrementMax -= tasks[tasks_indices_lct[ind]].height();
+        }else{
+            t = tasks[tasks_indices_lct[maxIndex]].lct_to_timepoint;
+            t.increment -= tasks[tasks_indices_lct[ind]].height();
+            t.incrementMax -= tasks[tasks_indices_lct[ind]].height();
+        }
+    }
+
+
 
 
 

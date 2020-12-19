@@ -52,8 +52,80 @@ public class HorizontallyCubicNotFirst {
 
 
 
-
     private int[] Filter() {
+        for (int i = 0; i < n; i++)
+            estPrime[i] = tasks[i].earliestStartingTime();
+
+        for (int l = n-1; l >= 0; l--)
+        {
+            Task iTask = tasksByLct[l];
+            int i = iTask.id();
+            if(iTask.earliestCompletionTime() < iTask.latestCompletionTime() && iTask.inLambda == false)
+            {
+                boolean found = false; int lct = -1;
+                if(found == false)
+                {
+                    int h = 0; int k = 0;
+                    while(k < n && found == false)
+                    {
+                        if(k != l && tasks[i].earliestStartingTime() < tasksByLct[k].earliestCompletionTime())
+                        {
+                            h += tasksByLct[k].height();
+                            if(h + tasks[i].height() > C)
+                            {
+                                int ECT = ExtendInitializeIncrements(k,i);
+                                int ect = ScheduleTasks(tasksByLct[k].latestCompletionTime());
+                                if(ect > tasksByLct[k].latestCompletionTime())
+                                {
+                                    estPrime[i] = Math.max(estPrime[i], ECT);
+                                    found = true; lct = k;
+                                }
+                            }
+                            while(k+1 < n && found == false && tasksByLct[k].latestCompletionTime() == tasksByLct[k+1].latestCompletionTime())
+                                k++;
+                        }
+                        k++;
+                    }
+                }
+                if(found == true){
+                    int v = l-1;
+                    while(v >= 0)
+                    {
+                        if(tasksByLct[v].earliestStartingTime() <= tasks[i].earliestStartingTime() &&
+                                tasksByLct[v].height() >= tasks[i].height()
+                                && tasksByLct[v].earliestCompletionTime() >= tasks[i].earliestCompletionTime())
+                        {
+                            int ECT = ExtendInitializeIncrements(lct,tasksByLct[v].id());
+                            int ect = ScheduleTasks(tasksByLct[lct].latestCompletionTime());
+                            if(ect > tasksByLct[lct].latestCompletionTime())
+                            {
+                                estPrime[tasksByLct[v].id()] = Math.max(estPrime[tasksByLct[v].id()], ECT);
+                            }
+                            tasksByLct[v].inLambda = true;
+                        }
+                        v--;
+                    }
+                }
+                if(found == false)
+                {
+                    int v = l-1;
+                    while(v >= 0)
+                    {
+                        if(tasksByLct[v].earliestStartingTime() == tasks[i].earliestStartingTime() &&
+                                tasksByLct[v].height() <= tasks[i].height()
+                                && tasksByLct[v].earliestCompletionTime() <= tasks[i].earliestCompletionTime())
+                            tasksByLct[v].inLambda = true;
+                        v--;
+                    }
+                }
+            }
+        }
+        return estPrime;
+    }
+
+
+
+    /*private int[] Filter() {
         for (int i = 0; i < n; i++)
             estPrime[i] = tasks[i].earliestStartingTime();
 
@@ -113,12 +185,12 @@ public class HorizontallyCubicNotFirst {
             }
         }
         return estPrime;
-    }
+    }*/
 
 
 
 
-    public ArrayList<Integer> ScheduleConflictingTask(int i) {
+    private ArrayList<Integer> ScheduleConflictingTask(int i) {
         int hreq, hmaxInc, ov, ect, t0;
         ect = Integer.MIN_VALUE; t0 = -1;
         ov = hreq = hmaxInc = 0;
@@ -173,7 +245,7 @@ public class HorizontallyCubicNotFirst {
 
 
 
-    public void InitializeIncrementsOfConflictingTask(int l) {
+    private void InitializeIncrementsOfConflictingTask(int l) {
         Timepoint t = tl.first;
         while(t != null)
         {

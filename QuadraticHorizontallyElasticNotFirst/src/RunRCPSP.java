@@ -14,22 +14,34 @@ public class RunRCPSP {
     // not-first/not-last propagator used
     private static final int TimeLine = 0;
     private static final int Horizontally = 1;
-    private static final int CombQuadHoriz = 2;
-    private static final int OldHorizontally = 3;
+    private static final int CombQuadHoriz = 10;
+    private static final int OldHorizontally = 2;
 
     // edge finder propagator used
-    private static final int GingrasEF = 4;
+    private static final int GingrasEF = 3;
+    private static final int HorizontallyEF = 4;
+    private static final int HorizontallyEFRevisited = 5;
 
-    // combinaison of edge finder and not-first/not-last propagator used
-    private static final int GingrasEF_TimeLine = 5;
-    private static final int GingrasEF_Horizontally = 6;
+    // combinaison of Gingras edge finder and not-first/not-last propagator used
+    private static final int GingrasEF_TimeLine = 6;
+    private static final int GingrasEF_Horizontally = 7;
+
+    // combinaison of new edge finder and not-first/not-last propagator used
+    private static final int HorizontallyEF_TimeLine = 8;
+    private static final int HorizontallyEF_Horizontally = 9;
+
+    // combinaison of state-of-the-art algorithms and new algorithms
+    // private static final int GingrasEF_TimeLine = 6;
+    // private static final int HorizontallyEF_Horizontally = 9;
 
     // search strategy used
     private static final int staticSearch = 0;
-    private static final int dynamicSearchDOWS = 1;
+    private static final int dynamicSearchCOSMDLB = 1;
     private static final int dynamicSearchCOSDOWS = 2;
     private static final int dynamicSearchMDLB = 3;
-    private static final int dynamicSearchCOSMDLB = 4;
+    private static final int dynamicSearchDOWS = 4;
+
+
 
     private int m_numberOfTasks;
     private int m_numberOfResources;
@@ -39,7 +51,7 @@ public class RunRCPSP {
     private long m_visitedNodes;
     private int m_makespan;
     private int m_adjustements;
-    public RunRCPSP(String fileName, int propagator, int search) throws Exception {
+    public RunRCPSP(String fileName, int propagator, int search, int timeLimit) throws Exception {
         // new model creation
         Model model = new Model("RCPSP Solver");
         // read data from a file
@@ -210,6 +222,62 @@ public class RunRCPSP {
                         model.post(HorizontallyNotFirstC);
                         model.post(GingrasEFCC);
                         break;
+                    case HorizontallyEF:
+                        Constraint HorizontallyEF = new Constraint("new Quadratic Horizontally elastic Edge Finder",
+                                propagators[i] = new HorizontallyEdgeFinderConstraint(
+                                        filtered_startingTimes_makespan,
+                                        filtered_endingTimes,
+                                        filtered_heights,
+                                        filtered_processingTimes,
+                                        data.capacities[i]));
+                        model.post(HorizontallyEF);
+                        break;
+                    case HorizontallyEFRevisited:
+                        Constraint HorizontallyEFRevisited = new Constraint("Horizontally elastic Edge Finder Revisited",
+                                propagators[i] = new HorizontallyEdgeFinderRevisitedConstraint(
+                                        filtered_startingTimes_makespan,
+                                        filtered_endingTimes,
+                                        filtered_heights,
+                                        filtered_processingTimes,
+                                        data.capacities[i]));
+                        model.post(HorizontallyEFRevisited);
+                        break;
+                    case HorizontallyEF_TimeLine:
+                        Constraint HorizontallyEFC = new Constraint("new Quadratic Horizontally elastic Edge Finder",
+                                propagators[i] = new HorizontallyEdgeFinderConstraint(
+                                        filtered_startingTimes_makespan,
+                                        filtered_endingTimes,
+                                        filtered_heights,
+                                        filtered_processingTimes,
+                                        data.capacities[i]));
+                        Constraint TimeLineNotFirstCC = new Constraint("Quadratic Not-First With TimeLine",
+                                propagators[i] = new TimeLineNotFirstConstraint(
+                                        filtered_startingTimes_makespan,
+                                        filtered_endingTimes,
+                                        filtered_heights,
+                                        filtered_processingTimes,
+                                        data.capacities[i]));
+                        model.post(TimeLineNotFirstCC);
+                        model.post(HorizontallyEFC);
+                        break;
+                    case HorizontallyEF_Horizontally:
+                        Constraint HorizontallyEFCC = new Constraint("new Quadratic Horizontally elastic Edge Finder",
+                                propagators[i] = new HorizontallyEdgeFinderConstraint(
+                                        filtered_startingTimes_makespan,
+                                        filtered_endingTimes,
+                                        filtered_heights,
+                                        filtered_processingTimes,
+                                        data.capacities[i]));
+                        Constraint HorizontallyNotFirstCC = new Constraint("Quadratic Not-First With Profile",
+                                propagators[i] = new HorizontallyNotFirstConstraint(
+                                        filtered_startingTimes_makespan,
+                                        filtered_endingTimes,
+                                        filtered_heights,
+                                        filtered_processingTimes,
+                                        data.capacities[i]));
+                        model.post(HorizontallyNotFirstCC);
+                        model.post(HorizontallyEFCC);
+                        break;
                     default:
                         model.cumulative(filtered_tasks, filtered_heights_var, model.intVar("capacity", data.capacities[i]), false, Cumulative.Filter.TIME).post();
                 }
@@ -240,7 +308,7 @@ public class RunRCPSP {
                 solver.setSearch(Search.conflictOrderingSearch(Search.intVarSearch(new SmallestVarOrder(model), new IntDomainMin(), startingTimes_and_makespan)));
         }
         solver.setRestartOnSolutions();
-        solver.limitTime(1*60*1000);
+        solver.limitTime(timeLimit * 60 * 1000);
         // solution of the problem
         Solution best = solver.findOptimalSolution(makespan, false);
         m_solution = new int[m_numberOfTasks];

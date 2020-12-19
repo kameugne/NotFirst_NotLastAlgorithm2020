@@ -9,8 +9,8 @@ public class EvaluationPetitExample {
     public static void main(String[] args) throws Exception
     {
         boolean found = false;
-        int C = 2;
-        int n = 5;
+        int C = 6;
+        int n = 10;
         
         for (int i=0; i<900000000; i++)
         {
@@ -19,11 +19,14 @@ public class EvaluationPetitExample {
             //ThetaTreeNotFirst tt = new ThetaTreeNotFirst(tasks, C);
             TimeLineNotFirst tl = new TimeLineNotFirst(tasks, C);
             HorizontallyNotFirst he = new HorizontallyNotFirst(tasks, C);
+            HorizontallyEdgeFinder hef = new HorizontallyEdgeFinder(tasks, C);
 
             
             //int[] estTT = tt.filterWithTimeline();
             int[] estTL = tl.filterWithTimeline();
             int[] estHE = he.Filter();
+            int[] estHEF = hef.Filter();
+            int[] est = ef.Filter();
             boolean validInstance = true;
             if(!ef.OverloadCheck())
             {
@@ -32,18 +35,18 @@ public class EvaluationPetitExample {
             else
             {
                 for(int l=0; l < tasks.length; l++){
-                    if( /*estTT[l] > tasks[l].earliestStartingTime() ||*/ estTL[l] + tasks[l].processingTime() > tasks[l].latestCompletionTime()){
+                    if( estHEF[l] > tasks[l].earliestStartingTime() || estHEF[l] + tasks[l].processingTime() > tasks[l].latestCompletionTime()){
                     	validInstance = false;
                         break;
                     }
-                    if( estTL[l] + tasks[l].processingTime() > tasks[l].latestCompletionTime()){
+                    if( est[l] + tasks[l].processingTime() > tasks[l].latestCompletionTime()){
                     	validInstance = false;
                         break;
                     }
-                    if(estHE[l] > tasks[l].earliestStartingTime() || estHE[l] + tasks[l].processingTime() > tasks[l].latestCompletionTime()){
+                    /*if(estHE[l] > tasks[l].earliestStartingTime() || estHE[l] + tasks[l].processingTime() > tasks[l].latestCompletionTime()){
                     	validInstance = false;
                         break;
-                    }
+                    }*/
                     /*if(estTT[l] > tasks[l].earliestStartingTime() || estTT[l] + tasks[l].processingTime() > tasks[l].latestCompletionTime()){
                     	validInstance = false;
                         break;
@@ -80,18 +83,18 @@ public class EvaluationPetitExample {
 
             for(int j=0; j < n; j++)
             {
-                if(validInstance && estTL[j] > estHE[j])
+                if(validInstance && est[j] > estHEF[j] && estHEF[j] != 0)
                 {
                     for(int k=0; k<tasks.length; k++)
                     {
                         System.out.println("k = " + k + "  : " + tasks[k].toString());
                     }
-                    System.out.println("TimeLine not-first : " + Arrays.toString(estTL));
-                    System.out.println("Horizontally Elastic not-first : " + Arrays.toString(estHE));
+                    System.out.println("Gingras Horizontally Edge Finder : " + Arrays.toString(est));
+                    System.out.println("Fetgo Horizontally Edge Finder : " + Arrays.toString(estHEF));
                     System.out.println("C = " + C);
                     System.out.println("i = " + j);
-                    System.out.println("TimeLine not-first : " + estTL[j]);
-                    System.out.println("Horizontally Elastic not-first : " + estHE[j]);
+                    System.out.println("Gingras Horizontally Edge Finder : " + est[j]);
+                    System.out.println("Fetgo Horizontally Edge Finder :" + estHEF[j]);
                     found = true;
                     break;
                 }
